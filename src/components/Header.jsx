@@ -3,7 +3,7 @@ import nbaLogo from "../assets/nba-logo.png";
 
 const Header = () => {
   return (
-    <div >
+    <div>
       <div className="flex justify-center my-5 ">
         <img className="mx-auto w-72" src={nbaLogo} alt="nba-logo" />
       </div>

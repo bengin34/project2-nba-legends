@@ -1,17 +1,11 @@
-import CardContainer from "./components/CardContainer";
 import Header from "./components/Header";
-
-import Search from "./components/Search";
-
+import CardContainer from "./components/CardContainer";
 
 function App() {
-
   return (
     <div className="App">
-   <Header />
-   <Search  />
-  <CardContainer/>
-
+      <Header />
+      <CardContainer />
     </div>
   );
 }
