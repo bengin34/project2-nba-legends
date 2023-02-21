@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 
 const PlayerCard = ({ name, img, statistics }) => {
-  const [displayStats, setDisplayStats] = useState(false);
+  const [displayStats, setDisplayStats] = useState(true);
 
   return (
-    <div class="max-w-sm rounded justify-center overflow-hidden shadow-lg">
-      <img class="w-full h-96" src={img} alt={name} />
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{name}</div>
-      </div>
+    <div className="max-w-sm bg-white rounded justify-center overflow-hidden shadow-lg" onClick={() => setDisplayStats(!displayStats)}>
+    {displayStats 
+    ? ( <img className="w-full h-96" src={img} alt={name} />
+     )
+    : (<ul>
+        {statistics.map((item)=>{
+            return (
+            <li className="flex justify-center text-lg my-10 text-center " >{item}</li>
+            )
+        })}
+    </ul> )
+       }
+       <div className="px-6 py-4">
+        <div className="font-bold text-xl text-center mb-2">{name}</div>
+       </div>
+     
     </div>
   );
 };
