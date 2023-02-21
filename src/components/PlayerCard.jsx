@@ -5,11 +5,11 @@ const PlayerCard = ({ name, img, statistics }) => {
 
   return (
     <div
-      className="max-w-sm bg-white rounded justify-center overflow-hidden shadow-lg"
+      className="max-w-sm bg-white  rounded justify-center overflow-hidden shadow-lg"
       onClick={() => setDisplayStats(!displayStats)}
     >
       {displayStats ? (
-        <img className="w-full h-96" src={img} alt={name} />
+        <img className="w-full rounded h-96 scale-100 hover:scale-75" src={img} alt={name} />
       ) : (
         <ul>
           {statistics.map((item) => {

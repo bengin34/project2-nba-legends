@@ -9,22 +9,19 @@ const CardContainer = () => {
   };
 
   const filterFunc = (search) => {
-    const inputValue = value
-      .trim()
-      .replace(/[^a-zA-Z ]/g, "")
-      .toLowerCase();
+    const inputValue = value.trim().replace(/[^a-zA-Z ]/g, '').toLowerCase();
     if (search.name.toLowerCase().includes(inputValue)) {
       return search;
     }
-  };
+  }
 
   return (
     <div>
       <div className="text-center my-5">
         <input
-          type="text"
+          type="search"
           onChange={handleChange}
-          className="w-2/4 py-2 font-large text-center rounded-t border-gray-300 focus:outlibe-none focus:border-indigo-500"
+          className="w-2/4 py-2 font-large text-center rounded-t "
         />
       </div>
       {value ? (
@@ -36,7 +33,8 @@ const CardContainer = () => {
                 name={name}
                 img={img}
                 statistics={statistics}
-                className="transform transition-transform duration-300 hover:-translate-y-1"
+                
+
               />
             );
           })}
