@@ -6,3 +6,11 @@ body{
   background: rgb(201,8,42);
 background: radial-gradient(circle, rgba(201,8,42,1) 63%, rgba(23,64,139,1) 100%);
 }
+
+
+@media (max-width: 980px) {
+  body {
+    background: rgb(23,64,139);
+    background: radial-gradient(circle, rgba(23,64,139,1) 23%, rgba(201,8,42,1) 100%);
+  }
+}

@@ -6,7 +6,11 @@ const Search = ({ setSearch }) => {
   };
   return (
     <div className="text-center my-5">
-      <input type="text" onChange={handleChange} className="w-2/4 py-2 font-large text-center rounded-t"/>
+      <input
+        type="text"
+        onChange={handleChange}
+        className="w-2/4 py-2 font-large text-center rounded-t"
+      />
     </div>
   );
 };
